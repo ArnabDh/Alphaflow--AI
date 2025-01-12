@@ -1,0 +1,51 @@
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #1e40af;
+  --background-color: #f8fafc;
+  --text-color: #1e293b;
+  --success-color: #22c55e;
+  --warning-color: #eab308;
+  --danger-color: #ef4444;
+  --border-color: #e2e8f0;
+}
+
+.App {
+  min-height: 100vh;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.main-container {
+  display: flex;
+  position: relative;
+  height: calc(100vh - 64px); /* Subtract header height */
+}
+
+.content-area {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+/* Priority Colors */
+.priority-p0 { background-color: #fee2e2; color: #dc2626; }
+.priority-p1 { background-color: #ffedd5; color: #ea580c; }
+.priority-p2 { background-color: #fef9c3; color: #ca8a04; }
+.priority-p3 { background-color: #dcfce7; color: #16a34a; }
+.priority-p4 { background-color: #f0fdf4; color: #22c55e; }
+
+/* Status Colors */
+.status-done { color: var(--success-color); }
+.status-inprogress { color: var(--warning-color); }
+.status-pending { color: var(--danger-color); }
+
+/* Animations */
+@keyframes slideIn {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
